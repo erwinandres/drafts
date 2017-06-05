@@ -83,9 +83,10 @@ a {
 }
 
 .appHeader {
+  display: flex;
+  align-items: center;
   flex: 0 1 auto;
   background: #333;
-  padding: 10px 20px;
 }
 
 .appHeader-title {
@@ -111,6 +112,10 @@ a {
 
 .menuToggleButton {
   margin-right: 10px;
+  background: none;
+  border: none;
+  width: 48px;
+  height: 48px;
 }
 
 .app {
@@ -168,6 +173,12 @@ a {
 .editorMenu-close {
   text-align: right;
   margin-bottom: 10px;
+}
+
+.editorMenu-close-button {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background: #fff;
 }
 
 .editorMenu-docInfo {
@@ -276,6 +287,13 @@ a {
 
 .moreOptions {
   position: relative;
+}
+
+.moreOptions-button {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 3px 4px;
 }
 
 .moreOptions-options {
