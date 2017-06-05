@@ -235,6 +235,14 @@ a {
   padding: 0 10px;
 }
 
+.editorMenu-docList-item-emptyMessage {
+  padding: 10px 20px;
+}
+
+.editorMenu-docList-item-emptyMessage p {
+  margin: 0;
+}
+
 .editorMenu-docList-item-selected {
   background: #f6f7f8;
 }

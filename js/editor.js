@@ -22174,7 +22174,19 @@
 	                { className: 'editorMenu-docList-title' },
 	                'My Drafts'
 	              ),
-	              menuItems
+	              menuItems.length > 0 ? menuItems : _react2.default.createElement(
+	                'li',
+	                { className: 'editorMenu-docList-item editorMenu-docList-item-emptyMessage' },
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  _react2.default.createElement(
+	                    'em',
+	                    null,
+	                    'No drafts yet.'
+	                  )
+	                )
+	              )
 	            )
 	          )
 	        )
