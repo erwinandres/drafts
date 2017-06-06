@@ -21874,13 +21874,16 @@
 
 	    (0, _classAutobind2.default)(_this);
 
+	    var selected = '1';
+	    var doc = selected ? draftsDB.getRow(selected, 'docs') : false;
+
 	    _this.state = {
-	      selected: '',
-	      menuItems: _this._getItems(''),
+	      selected: selected,
+	      menuItems: _this._getItems(selected),
 	      menuHidden: true,
 	      moreOptions: false,
-	      title: '',
-	      value: (0, _RichTextEditor.createEmptyValue)(),
+	      title: selected ? doc.title : '',
+	      value: selected ? (0, _RichTextEditor.createValueFromString)(doc.content, 'raw') : (0, _RichTextEditor.createEmptyValue)(),
 	      format: 'html',
 	      tab: 'rich',
 	      readOnly: false
@@ -22044,6 +22047,15 @@
 	                      'button',
 	                      { className: 'moreOptions-options-item-button' },
 	                      'Copy HTML'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    { className: 'moreOptions-options-item' },
+	                    _react2.default.createElement(
+	                      'button',
+	                      { className: 'moreOptions-options-item-button', onClick: this._logStateRaw },
+	                      'Debug content'
 	                    )
 	                  )
 	                )
